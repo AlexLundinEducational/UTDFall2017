@@ -1,0 +1,226 @@
+import java.util.*;
+import java.lang.*;
+import java.math.*;
+
+
+// Alex Lundin
+// Class: Data Structures and Introduction to Algorithmic Analysis
+// Section: SE 3345.001
+// Semester: Fall 2017 
+// Project 5
+// Description:
+
+/**
+ *
+ * @author Alex
+ */
+public class RedBlackTree <E extends Comparable<E>>{
+    //E element;
+    private static final boolean RED = false;
+    private static final boolean BLACK = true;
+    private Node<E> root;
+
+    
+    // NOTE do NOT define any constructors for this project -- the compiler will
+    //      generate a default (public, no arguments) constructor for you
+   private void adjustAfterInsertion(Node n) {
+        // Step 1: color the node red
+        n.setColor(RED);
+
+        // Step 2: Correct double red problems, if they exist
+        if (n != null && n != root && isRed(getParent(n))) {
+
+            // Step 2a (simplest): Recolor, and move up to see if more work
+            // needed
+            if (isRed(getSibling(getParent(n)))) {
+                getParent(n).setColor(, BLACK);
+                setColor(getSibling(getParent(n)), BLACK);
+                setColor(getGrandParent(n), RED);
+                adjustAfterInsertion(getGrandParent(n));
+            }
+
+            // Step 2b: Restructure for a parent who is the left child of the
+            // grandparent. This will require a single right rotation if n is
+            // also
+            // a left child, or a left-right rotation otherwise.
+            else if (getParent(n) == getLeft(getGrandParent(n))) {
+                if (n == getRight(getParent(n))) {
+                    rotateLeft(n = getParent(n));
+                }
+                setColor(getParent(n), BLACK);
+                setColor(getGrandParent(n), RED);
+                rotateRight(getGrandParent(n));
+            }
+
+            // Step 2c: Restructure for a parent who is the right child of the
+            // grandparent. This will require a single left rotation if n is
+            // also
+            // a right child, or a right-left rotation otherwise.
+            else if (getParent(n) == getRight(getGrandParent(n))) {
+                if (n == getLeft(getParent(n))) {
+                    rotateRight(n = getParent(n));
+                }
+                setColor(getParent(n), BLACK);
+                setColor(getGrandParent(n), RED);
+                rotateLeft(getGrandParent(n));
+            }
+        }
+
+        // Step 3: Color the root black
+        setColor((Node) root, BLACK);
+    }
+   
+    public boolean insert(E element) throws NullPointerException
+    {
+        boolean isInserted = false;
+        
+        if (root == null) {
+            root = new Node(element);
+        }
+        Node n = root;
+        while (true) {
+            int comparisonResult = compare(element, n.getData());
+            if (comparisonResult == 0) {
+                n.setData(element);
+                return;
+            } else if (comparisonResult < 0) {
+                if (n.getLeft() == null) {
+                    n.setLeft(new Node(element));
+                    Node arg = n.getLeft();
+                    adjustAfterInsertion(arg);
+                    break;
+                }
+                n = n.getLeft();
+            } else { // comparisonResult > 0
+                if (n.getRight() == null) {
+                    n.setRight(new Node(element));
+                    adjustAfterInsertion((Node) n.getRight());
+                    break;
+                }
+                n = n.getRight();
+            }
+        }
+        
+        return isInserted;
+        // TODO your code goes here
+    }
+
+    public boolean contains(Comparable<E> object)
+    {
+        boolean isContained = false;
+        
+        return isContained;
+    }
+
+    @Override
+    public String toString()
+    {
+        String returnString = "a";
+        
+        return returnString;
+    }
+
+    // TODO add any helper methods here (optional)
+
+    static class Node <E extends Comparable<E>>
+    {
+        E element;
+        Node<E> leftChild;
+        Node<E> rightChild;
+        Node<E> parent;
+        boolean color;
+        
+        /**
+         * 
+         */
+        Node (E element){
+            this.element = element;
+        }
+        
+        /**
+         * setters
+         */
+        public void setElement(E element){
+                this.element = element;
+        }        
+        public void setLeft(Node n){
+                this.leftChild = n;
+        }
+        public void setRight(Node n){
+                this.rightChild = n;
+        }
+        public void setParent(Node n){
+                this.parent = n;
+        }
+        
+        public void setColor(boolean c){
+            // handles null pointer
+            if (this != null)
+                this.color = c;
+        }      
+        
+        /**
+         * getters
+         */
+        public Node getLeft(){
+                Node n = this.leftChild;
+                return n;
+        }
+        public Node getRight(){
+                Node n = this.rightChild;
+                return n;
+        }
+        public Node getParent(){
+                Node n = this.parent;
+                return n;            
+        }    
+    
+    /**
+     * Adds a single element item to the tree. If there is already an item in the
+     * tree that compares equal to the item being inserted, it is "overwritten"
+     * by the new item. Overrides BinarySearchTree.insert because the tree needs to
+     * be adjusted after insertion.
+     */
+
+
+ 
+
+	
+    private boolean colorOf(Node n) {
+        return n == null ? BLACK : n.color;
+    }
+
+    private boolean isRed(Node n) {
+        return n != null && colorOf(n) == RED;
+    }
+
+    private boolean isBlack(Node n) {
+        return n == null || colorOf(n) == BLACK;
+    }
+
+
+    private Node getParent(Node n) {
+        return n == null ? null : (Node) n.getParent();
+    }
+
+    private Node getGrandParent(Node n) {
+        return (n == null || n.getParent() == null) ? null : (Node) n
+                .getParent().getParent();
+    }
+
+    private Node getSibling(Node n) {
+        return (n == null || n.getParent() == null) ? null : (n == n
+                .getParent().getLeft()) ? (Node) n.getParent().getRight()
+                : (Node) n.getParent().getLeft();
+    }
+
+    private Node getLeft(Node n) {
+        return n == null ? null : (Node) n.getLeft();
+    }
+
+    private Node getRight(Node n) {
+        return n == null ? null : (Node) n.getRight();
+    }
+    
+    }
+}

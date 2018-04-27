@@ -1,0 +1,5 @@
+November 13th is the intermediate checkpoint of project progress on implementation, documentation, and testing. 
+You do not need to turn in anything by the deadline, but you are expected to have significant amount of artifacts for assessment on your project repo. 
+
+We will organize to demonstrate the prototype implementation during the week of Nov. 13.
+This assignment will not be graded.

@@ -1,0 +1,9 @@
+Notes
+	Reed recommends model view controller style
+	Scene builder
+		Drag and drop shades
+		
+	Scripting language for actions
+		click on date
+	
+	

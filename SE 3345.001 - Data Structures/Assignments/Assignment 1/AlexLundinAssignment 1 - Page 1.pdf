@@ -1,0 +1,57 @@
+%PDF-1.4
+%Çì¢
+1 0 obj<</CreationDate(D:20170831232220-05'00')/ModDate(D:20170831234334-05'00')/Author(alundi1a)/Creator(Bluebeam Revu x64)/Producer(Bluebeam PDF Library 2017.0.10)>>
+endobj
+2 0 obj<</Type/Catalog/Pages 3 0 R>>
+endobj
+3 0 obj<</Type/Pages/Kids[4 0 R]/Count 1>>
+endobj
+4 0 obj<</Type/Pages/Kids[5 0 R]/Count 1/Parent 3 0 R>>
+endobj
+5 0 obj<</Type/Page/Parent 4 0 R/MediaBox[0 0 612 792]/Annots 22 0 R>>
+endobj
+8 0 obj<</Name/Helv/Type/Font/BaseFont/Helvetica/Subtype/Type1/Encoding<</Type/Encoding/Differences[24/breve/caron/circumflex/dotaccent/hungarumlaut/ogonek/ring/tilde 39/quotesingle 96/grave 127/.notdef/bullet/dagger/daggerdbl/ellipsis/emdash/endash/florin/fraction/guilsinglleft/guilsinglright/minus/perthousand/quotedblbase/quotedblleft/quotedblright/quoteleft/quoteright/quotesinglbase/trademark/fi/fl/Lslash/OE/Scaron/Ydieresis/Zcaron/dotlessi/lslash/oe/scaron/zcaron/.notdef/Euro 164/currency 166/brokenbar 168/dieresis/copyright/ordfeminine 172/logicalnot/.notdef/registered/macron/degree/plusminus/twosuperior/threesuperior/acute/mu 183/periodcentered/cedilla/onesuperior/ordmasculine 188/onequarter/onehalf/threequarters 192/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]>>>>
+endobj
+21 0 obj<</Subj(Text Box)/Type/Annot/P 5 0 R/F 4/C[]/CreationDate(D:20170831232531-05'00')/T(alundi1a)/Subtype/FreeText/BS<</W 0/S/S/Type/Border>>/DA(1 0 0 rg /Helv 12 Tf)/DS(font: Helvetica 12pt; text-align:left; margin:3pt; line-height:13.8pt; color:#000000)/M(D:20170831234330-05'00')/AP<</N 24 0 R>>/Rect[31.5 12 601.5 761]/NM(PRTXOXEIZBYJGUSO)/RC(<?xml version="1.0"?><body xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:contentType="text/html" xfa:APIVersion="BluebeamPDFRevu:2017.0.10" xfa:spec="2.2.0" style="font:Helvetica 12pt; text-align:left; margin:3pt; line-height:13.8pt; color:#000000" xmlns="http://www.w3.org/1999/xhtml"><p style="color:#000000">Alex Lundin </p><p>Assignment 1</p><p /><p>1.\)</p><p style="color:#000000"><span style="color:#000000">input \(BinaryString, index\)</span></p><p style="color:#000000"><span style="color:#000000">output \(numberOfOnes\)</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">BinaryRecursion \(BinaryString, index, numberOfOnes\){</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">stringLength = BinaryString.length</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">if\(stringLength &lt; 1\){</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">stringCharacter = charAtIndex \(index\)</span></p><p style="color:#000000"><span style="color:#000000">index + 1</span></p><p style="color:#000000"><span style="color:#000000">BinaryString = subString\(index, stringLength\)</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">if\(stringCharacter equals "1"\){</span></p><p style="color:#000000"><span style="color:#000000">numberOfOnes + 1</span></p><p style="color:#000000"><span style="color:#000000">}</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">BinaryRecursion \(BinaryString, index, numberOfOnes\)</span></p><p style="color:#000000"><span style="color:#000000">}</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">else {</span></p><p style="color:#000000"><span style="color:#000000">return numberOfOnes</span></p><p style="color:#000000"><span style="color:#000000">}</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">}</span></p><p style="color:#000000" /><p style="color:#000000" /><p style="color:#000000" /><p style="color:#000000" /><p style="color:#000000" /><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">2.\)</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">a.\)</span></p><p style="color:#000000"><span style="color:#000000">[ 1 / \(4^0\) ] + [ 1 / \(4^1\) ] + [ 1 / \(4^2\) ] + [ 1 / \(4^3\) ] + ... +</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">[ 1 / 1] + [ 1 / 4 ] + [ 1 / 16 ] + [ 1 / 64 ] + ... +</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">Values approach but won't reach 2</span></p><p style="color:#000000" /><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">b.\)</span></p><p style="color:#000000"><span style="color:#000000">[ 0 / \(4^0\) ] + [ 1 / \(4^1\) ] + [ 2 / \(4^2\) ] + [ 3 / \(4^3\) ] + ... +</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">[ 0 / 1] + [ 1 / 4 ] + [ 2 / 16 ] + [ 3 / 64 ] + ... +</span></p><p style="color:#000000" /><p style="color:#000000"><span style="color:#000000">Values approach but won't reach 1</span></p></body>)/Contents<feff0041006c006500780020004c0075006e00640069006e0020000d00410073007300690067006e006d0065006e007400200031000d000d0031002e0029000d0069006e0070007500740020002800420069006e0061007200790053007400720069006e0067002c00200069006e0064006500780029000d006f0075007400700075007400200028006e0075006d006200650072004f0066004f006e006500730029000d000d00420069006e0061007200790052006500630075007200730069006f006e0020002800420069006e0061007200790053007400720069006e0067002c00200069006e006400650078002c0020006e0075006d006200650072004f0066004f006e006500730029007b000d000d0073007400720069006e0067004c0065006e0067007400680020003d002000420069006e0061007200790053007400720069006e0067002e006c0065006e006700740068000d000d0069006600280073007400720069006e0067004c0065006e0067007400680020003c002000310029007b000d000d0073007400720069006e00670043006800610072006100630074006500720020003d00200063006800610072004100740049006e006400650078002000280069006e0064006500780029000d0069006e0064006500780020002b00200031000d00420069006e0061007200790053007400720069006e00670020003d00200073007500620053007400720069006e006700280069006e006400650078002c00200073007400720069006e0067004c0065006e0067007400680029000d000d0069006600280073007400720069006e006700430068006100720061006300740065007200200065007100750061006c007300200022003100220029007b000d006e0075006d006200650072004f0066004f006e006500730020002b00200031000d007d000d000d00420069006e0061007200790052006500630075007200730069006f006e0020002800420069006e0061007200790053007400720069006e0067002c00200069006e006400650078002c0020006e0075006d006200650072004f0066004f006e006500730029000d007d000d000d0065006c007300650020007b000d00720065007400750072006e0020006e0075006d006200650072004f0066004f006e00650073000d007d000d000d007d000d000d000d000d000d000d000d0032002e0029000d000d0061002e0029000d005b002000310020002f002000280034005e003000290020005d0020002b0020005b002000310020002f002000280034005e003100290020005d0020002b0020005b002000310020002f002000280034005e003200290020005d0020002b0020005b002000310020002f002000280034005e003300290020005d0020002b0020002e002e002e0020002b000d000d005b002000310020002f00200031005d0020002b0020005b002000310020002f002000340020005d0020002b0020005b002000310020002f0020003100360020005d0020002b0020005b002000310020002f0020003600340020005d0020002b0020002e002e002e0020002b000d000d00560061006c00750065007300200061007000700072006f006100630068002000620075007400200077006f006e0027007400200072006500610063006800200032000d000d000d0062002e0029000d005b002000300020002f002000280034005e003000290020005d0020002b0020005b002000310020002f002000280034005e003100290020005d0020002b0020005b002000320020002f002000280034005e003200290020005d0020002b0020005b002000330020002f002000280034005e003300290020005d0020002b0020002e002e002e0020002b000d000d005b002000300020002f00200031005d0020002b0020005b002000310020002f002000340020005d0020002b0020005b002000320020002f0020003100360020005d0020002b0020005b002000330020002f0020003600340020005d0020002b0020002e002e002e0020002b000d000d00560061006c00750065007300200061007000700072006f006100630068002000620075007400200077006f006e0027007400200072006500610063006800200031>>>
+endobj
+22 0 obj[21 0 R]
+endobj
+24 0 obj<</Type/XObject/Subtype/Form/FormType 1/BBox[31.5 12 601.5 761]/Resources<</ProcSet[/PDF/Text]/Font<</Helv 8 0 R>>>>/Matrix[1 0 0 1 -31.5 -12]/Length 542/Filter/FlateDecode>>
+stream
+xœU]kÛ0ı+—¾¬¡Aµ>mÃöĞÑ
+eÙË²ã*‰‡£¤²¼vŒı÷I–;µ²–a0òÕ½çÜs®”< †È>ş]¬íÂ=zÙEî®ìë.³ö+rç×²ú	˜@¶ØS8Ä,F"á²5œ^Tò	nu_*˜@öãY*¥(Ù§Öu¹Tk©à@j$I8oS1šMÆ)"%ˆíRJµmÌN/K•ë_Ÿ.Õr
+¥º—OÁÚ8qMûÚMc|±jÖs©o·JÖÁ*Q´«òLw²ht]nT˜{
+‡˜¿ „ö2ê¶øFª¥YÁ;"¢ªxÊ«Âû°˜‚¼¤å"q‹íûU®óÂHm™»¾0«ì¨œ3×|ÇİfŸ…ÆÉYäüç¼*KU7s¿îx¦0dÅÔÍá¹â¾ùĞäU'ø$¨¥i¯}8 póV ·éû<vˆÿÿX0ssbÑ÷$«ZBHgDœë>IKÓhu@<® IÒK	ĞRsÉ±}"˜cLÛ}¼¶„ÆN™‡ÈÃ)öJìY¾Úè¹µ‘}føfGÔGğ(BFÚEBp6æÂööˆC.Ü°ƒÁş	j/×^ã—¼jìÑÊ·[½É‹ÌíoÍãF½1 ¥û&z"ú¦æA0&nR»¾£WxDFÑ×ydÏ¿p<"Cè‹ñöo£}É#+?dğ	ş^¡¨6
+endstream
+endobj
+xref
+0 25
+0000000000 65535 f 
+0000000015 00000 n 
+0000000190 00000 n 
+0000000234 00000 n 
+0000000284 00000 n 
+0000000347 00000 n 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000425 00000 n 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000000000 65535 f 
+0000001693 00000 n 
+0000008497 00000 n 
+0000000000 65535 f 
+0000008521 00000 n 
+trailer<</Size 25/Info 1 0 R/ID[<351bf4f194605f8aeff08af6b7631e42><9ba9423906d7202c3847715e73dff8a4>]/Root 2 0 R>>
+startxref
+9271
+%%EOF

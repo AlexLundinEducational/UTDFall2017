@@ -1,0 +1,71 @@
+Alex Lundin
+
+I
+How does the waterfall model differ from the iterative model? What are the main advantages of
+the latter over the former?
+
+	Waterfall
+		testing or validation after each step
+		no iterations
+		
+		Cons
+			Takes to long
+			Small errors are costly
+	Iterative
+		Infinite weak cycles
+		
+
+		Advantages
+			Less effort on each iteration
+			plan for change
+			Software is always useable, even with minor flaws
+			
+II
+Use form-based specification to describe how the students can add, remove, and change
+their course registrations
+
+Network-based course registration system
+
+	Function		Add
+	Description		Add course to registration schedule
+	Inputs 			Course identifier
+	Source			Client that is registering
+	Outputs			Update request to database
+	Destination		Main registration database
+	Action			Insert new course to clients schedule, update avaiable slots open to other clients
+	Requirement 	No conflicting time slots, all course pre-requisets met, good academic standing, authorization to register
+	Pre-condition 	Course selected
+	Postcondition	Update to main database, update to clients schedule
+	Side effects	Time slot filled on clients schedule, one less slot avaiable in the class offerings
+	
+	Function		Remove
+	Description		Remove course to registration schedule
+	Inputs 			Course identifier
+	Source			Client that is registering
+	Outputs			Update request to database
+	Destination		Main registration database
+	Action			Remove course to clients schedule, update avaiable slots open to other clients
+	Requirement 	No conflicting time slots, all course pre-requisets met, good academic standing, authorization to withdrawl
+	Pre-condition 	Course selected
+	Postcondition	Update to main database, update to clients schedule
+	Side effects	Time slot opened on clients schedule, one more slot avaiable in the class offerings
+	
+	Function		Change
+	Description		Change course to registration schedule
+	Inputs 			Course identifier
+	Source			Client that is registering
+	Outputs			Update request to database
+	Destination		Main registration database
+	Action			Change course on clients schedule, update avaiable slots open to other clients
+	Requirement 	No conflicting time slots, all course pre-requisets met, good academic standing, authorization to register
+	Pre-condition 	Course selected
+	Postcondition	Update to main database, update to clients schedule
+	Side effects	Time slot filled on clients schedule, one less slot avaiable in the class offerings
+	
+III 
+UML Class and Sequence Diagrams
+
+IV
+Design Patterns
+	I used a abstract class to define the common methods each element would use
+	In addition to the interface which would contains the accept method signature

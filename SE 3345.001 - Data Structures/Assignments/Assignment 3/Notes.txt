@@ -1,0 +1,31 @@
+void swap (struct list **list1)
+{
+    struct list *cur, *tmp, *next;
+    cur = *list1;
+    if (cur && cur->next)
+        *list1 = cur->next;
+
+    //To make sure that we have at least two more elements to be swapped.
+    while (cur && cur->next)
+    {
+        next = cur->next;
+        tmp = next->next;
+        next->next = cur;
+        //We have to make 1->next as 4 in above example (figure).
+
+        if (tmp)
+            cur->next = tmp->next;
+        cur = tmp;
+    }
+    return;
+}
+
+
+
+if(tmp)
+    if (tmp->next)
+        cur->next = tmp->next;
+    else
+        cur->next = tmp;    // take care of an add number of nodes
+else
+    cur->next = NULL;   // take care of an even number of nodes

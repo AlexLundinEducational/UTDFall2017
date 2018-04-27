@@ -1,0 +1,227 @@
+226
+169
+CHAPTER 3
+
+PowerPoint
+
+	Abstract Data Types
+		Defined from a set of values and operations 
+		
+		List
+			Definitions:
+				Empty List	- has size of 0
+				
+			Operations:
+				printList	- linear
+				makeEmpty
+				find		- O(n)
+				Insert		- O(n)
+				Remove		- O(n)
+				findKth		- constant time, O(i), index of node
+				
+			Implementations:
+				List
+					
+				Array
+					print 	- O(n), is linear
+					findKth	- O(i), is constant
+					insertion and deletion is O(n)
+					
+				Linked
+				
+			Collections
+				Contains comman data strucutres
+					isEmpty, size, contains, add, remove
+				
+			Iterable Interface
+				Collection interface extends Iterable interface	
+					interface ----|> Iterable
+						Must provide Iterator method
+						Returns object of type Iterator
+						
+				Methods
+					Remove: can remove last item returned by next
+				
+			List extends Collection
+				get
+				set
+				add
+				remove
+				ListIterator()
+				
+			ArrayList vs LinkedList
+				Make list				- both 0(n)
+				Make list by index		-	Array O(n^2) Linked O(n)
+				Accumulation by index	- Array O(n) Linked O(n^2)
+				Remove with iterator	- ArrayList quadractic O(n^2), Linked linear 0(n)
+				Look up ConcurrentModificationException on remove without iterator
+				
+			Nested Class and Inner Class
+				Nested
+					- static
+				Inner
+					- useful where the inner class object is tied with exactly one instance of the outer class
+					- example, not the whole class, specific instances
+					- instance
+					- associated with out class objects
+				
+		Stack
+		
+		Queue
+Class Notes
+
+Book
+
+Online
+	Interfaces
+
+		can only contain method signatures and fields. 
+		An Java interface cannot contain an implementation of the methods, only the signature (name, parameters and exceptions) of the method.
+		You can use interfaces in Java as a way to achieve polymorphism.
+		
+	Iterators
+	http://www.geeksforgeeks.org/iterators-in-java/
+	Iterators in Java
+	Iterators are used in Collection framework in Java to retrieve elements one by one. There are three iterators.
+
+	Enumeration :
+
+	It is a interface used to get elements of legacy collections(Vector, Hashtable). Enumeration is the first iterator present from JDK 1.0, rests are included in JDK 1.2 with more functionality. Enumerations are also used to specify the input streams to a SequenceInputStream. We can create Enumeration object by calling elements() method of vector class on any vector object
+	// Here "v" is an Vector class object. e is of
+	// type Enumeration interface and refers to "v"
+	Enumeration e = v.elements();
+	There are two methods in Enumeration interface namely :
+
+	// Tests if this enumeration contains more elements
+	public boolean hasMoreElements();
+
+	// Returns the next element of this enumeration 
+	// It throws NoSuchElementException
+	// if no more element present
+	public Object nextElement();
+
+	Limitations of Enumeration :
+
+	Enumeration is for legacy classes(Vector, Hashtable) only. Hence it is not a universal iterator.
+	Remove operations can’t be performed using Enumeration.
+	Only forward direction iterating is possible.
+	 
+
+	Iterator:
+
+	It is a universal iterator as we can apply it to any Collection object. By using Iterator, we can perform both read and remove operations. It is improved version of Enumeration with additional functionality of remove-ability of a element.
+	Iterator must be used whenever we want to enumerate elements in all Collection framework implemented interfaces like Set, List, Queue, Deque and also in all implemented classes of Map interface. Iterator is the only cursor available for entire collection framework.
+
+	Iterator object can be created by calling iterator() method present in Collection interface.
+
+	// Here "c" is any Collection object. itr is of
+	// type Iterator interface and refers to "c"
+	Iterator itr = c.iterator();
+	Iterator interface defines three methods:
+
+	// Returns true if the iteration has more elements
+	public boolean hasNext();
+
+	// Returns the next element in the iteration
+	// It throws NoSuchElementException if no more 
+	// element present
+	public Object next();
+
+	// Remove the next element in the iteration
+	// This method can be called only once per call
+	// to next()
+	public void remove();
+	remove() method can throw two exceptions
+
+	UnsupportedOperationException : If the remove operation is not supported by this iterator
+	IllegalStateException : If the next method has not yet been called, or the remove method has already been called after the last call to the next method
+
+	Limitations of Iterator :
+
+	Only forward direction iterating is possible.
+	Replacement and addition of new element is not supported by Iterator.
+	 
+
+	ListIterator:
+
+	It is only applicable for List collection implemented classes like arraylist, linkedlist etc. It provides bi-directional iteration.
+	ListIterator must be used when we want to enumerate elements of List. This cursor has more functionality(methods) than iterator.
+
+	ListIterator object can be created by calling listIterator() method present in List interface.
+
+	// Here "l" is any List object, ltr is of type
+	// ListIterator interface and refers to "l"
+	ListIterator ltr = l.listIterator();
+	ListIterator interface extends Iterator interface. So all three methods of Iterator interface are available for ListIterator. In addition there are six more methods.
+
+	// Forward direction
+
+	// Returns true if the iteration has more elements
+	public boolean hasNext();
+
+	// same as next() method of Iterator
+	public Object next();
+
+	// Returns the next element index 
+	// or list size if the list iterator
+	// is at the end of the list
+	public int nextIndex();
+
+	// Backward direction
+
+	// Returns true if the iteration has more elements
+	// while traversing backward
+	public boolean hasPrevious();
+
+	// Returns the previous element in the iteration
+	// and can throws NoSuchElementException
+	// if no more element present
+	public Object previous();
+
+	// Returns the previous element index 
+	//  or -1 if the list iterator is at the 
+	// beginning of the list
+	public int previousIndex();
+
+	// Other Methods
+	 
+	// same as remove() method of Iterator
+	public void remove();
+
+	// Replaces the last element returned by 
+	// next() or previous() with the specified element 
+	public void set(Object obj);
+
+	// Inserts the specified element into the list at
+	// position before the element that would be returned 
+	// by next(),
+	public void add(Object obj);
+	Clearly the three methods that ListIterator inherits from Iterator (hasNext(), next(), and remove()) do exactly the same thing in both interfaces. The hasPrevious() and the previous operations are exact analogues of hasNext() and next(). The former operations refer to the element before the (implicit) cursor, whereas the latter refer to the element after the cursor. The previous operation moves the cursor backward, whereas next moves it forward.
+
+	ListIterator has no current element; its cursor position always lies between the element that would be returned by a call to previous() and the element that would be returned by a call to next()
+
+	set() method can throw four exceptions
+
+	UnsupportedOperationException – if the set operation is not supported by this list iterator
+	ClassCastException : If the class of the specified element prevents it from being added to this list
+	IllegalArgumentException : If some aspect of the specified element prevents it from being added to this list
+	IllegalStateException : If neither next nor previous have been called, or remove or add have been called after the last call to next or previous
+	add() method can throw three exceptions
+
+	UnsupportedOperationException : If the add method is not supported by this list iterator
+	ClassCastException : If the class of the specified element prevents it from being added to this list
+	IllegalArgumentException : If some aspect of this element prevents it from being added to this list
+
+	Limitations of ListIterator : It is the most powerful iterator but it is only applicable for List implemented classes, so it is not a universal iterator.
+
+	 
+
+	Important Common Points
+
+	1 : Please note that initially any iterator reference will point to the index just before the index of first element in a collection.
+	2 : We don’t create objects of Enumeration, Iterator, ListIterator because they are interfaces. We use methods like elements(), iterator(), listIterator() to create objects. These methods have anonymous Inner classes that extends respective interfaces and return this class object. This can be verified by below code. For more on inner class refer
+
+		
+		
+	
+	

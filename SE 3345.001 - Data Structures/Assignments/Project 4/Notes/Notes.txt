@@ -1,0 +1,42 @@
+Spec
+	Stay in skeleton
+	Research generic type	
+		This project has generic E
+		Comparable that extends E
+	Use default package
+
+Access Modifiers
+	https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html
+	
+	http://www.uml-diagrams.org/visibility.html
+	
+	You are correct that the "~" symbol denotes "package" visibility in UML.  
+	It's called "package-private" access in Java.  (different terms, same concept)  
+	The way you implement it in Java is simply by leaving off the access modifier entirely.  
+	I have attached an example source code file.  
+	You might also want to look at the "Access Levels" table in the second link below -- it's a very succinct explanation of the differences.
+
+Driver Notes:
+
+	How should I go about checking if my code is actually working if the project doesn't make us do a main method? 
+	And when I have tried to implement a main method my whole program gets errors because of the generic type not working
+	in a static method.
+
+	You should create a separate driver class entirely to test your own data structure.  (see the attached example)  
+	Just because your data structure shouldn't have main doesn't mean you can't still create helper classes to facilitate
+	 developing your project.
+
+	And yes, you will get errors if you try to access the generic type parameter of a class inside a static method 
+	of that class.  This is because the type parameter of the class is only given a value when you instantiate 
+	an object of that class, but a static method is associated with the un-instantiated class only, 
+	and so does not have access to the actual type parameter value of any specific object.  
+	In general, you can think of a static method as a regular free function (a la C++) 
+	that just happens to be located inside a class namespace for organization 
+	-- a static method doesn't actually get access to the object-level fields of that class 
+	(and that includes the generic type parameters).
+
+	Recap
+		Seperate driver class
+		Type parameter of class only available through an object of that class
+		Static method 	-- no object instance
+					-- no access to any object type parameters

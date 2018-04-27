@@ -1,0 +1,19 @@
+Exam 1 Review
+
+Course Topics:
+
+	Software development process
+	Software requirements engineering
+	Architecture & design patterns
+	Implementation & coding styles
+	
+Ability to:
+	understand software lifecycle development models
+	understand and apply software requirements
+	engineering techniques
+	understand and apply software design principles
+	
+	understand the use of metrics in software engineering
+	understand formal methods in software development
+	establish and participate in an ethical software
+	development team
